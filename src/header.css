@@ -1,0 +1,160 @@
+/* Estilos globales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #007bff, #0056b3); /* Gradiente */
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box; /* Asegura que no haya overflow */
+}
+
+/* Estilo del logo */
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Estilo para el menú de navegación */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente en hover */
+  color: #fff;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .header {
+      padding: 10px 20px;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  nav ul {
+      flex-direction: row;
+      flex-wrap: wrap; /* Permite que los elementos se distribuyan */
+      justify-content: center; /* Centra los enlaces */
+      gap: 10px;
+  }
+
+  nav ul li {
+      flex: 1 1 45%; /* Ocupa 2 elementos por fila */
+  }
+
+  nav ul li a {
+      font-size: 16px;
+  }
+
+  .logo h1 {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+      padding: 10px;
+  }
+
+  nav ul {
+      gap: 5px;
+  }
+
+  nav ul li a {
+      font-size: 14px;
+      padding: 5px 10px;
+  }
+
+  .logo h1 {
+      font-size: 18px;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative; /* Cambiado a relativo */
+  width: 100%;
+  bottom: 0;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.btn-attractive {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center; /* Alinea el icono y el texto */
+  transition: background-color 0.3s, transform 0.2s; /* Agrega una transición suave */
+}
+
+.btn-attractive i {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.btn-attractive:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Aumenta ligeramente el botón al pasar el mouse */
+}
+
+/* Agrega este CSS para mejorar el título */
+.logo h1 {
+  margin: 0;
+  font-size: 28px; /* Aumenta el tamaño de la fuente */
+  color: #fff; /* Cambia el color si lo deseas */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Agrega sombra al texto para resaltar */
+  margin-bottom: 20px; /* Espaciado entre el título y los botones */
+}

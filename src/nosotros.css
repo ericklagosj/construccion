@@ -1,0 +1,98 @@
+/* Sección Sobre Nosotros */
+.sobre-nosotros {
+  position: relative;
+  padding: 60px 20px;
+  background-image: url('../src/images/img19.jpeg'); /* Ajusta la ruta de la imagen */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Capa gris encima de la imagen de fondo */
+.sobre-nosotros::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Capa gris semitransparente */
+  z-index: -1; /* Coloca la capa debajo del contenido */
+}
+
+.sobre-nosotros h2 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.sobre-nosotros h2::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background-color: #fff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Contenedor de los maestros */
+.contenedor-maestros {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Tarjetas de maestros */
+.maestro {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente para que resalte */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  z-index: 2; /* Asegura que las tarjetas estén por encima de la capa gris */
+}
+
+.maestro:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.maestro h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.maestro p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Media queries para mejor responsividad */
+@media (max-width: 768px) {
+  .contenedor-maestros {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .maestro {
+    max-width: 90%;
+  }
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 769px) {
+  .sobre-nosotros {
+      min-height: 60vh; /* Aumenta la altura mínima en pantallas grandes */
+  }
+}
